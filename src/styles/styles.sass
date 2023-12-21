@@ -1,0 +1,224 @@
+/* importar letra */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400500600700&display=swap')
+
+// Ui styles
+@import './base/_settings.sass'
+
+:root
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif
+
+  --bgColor1: rgb(0, 0, 42)
+  --bgColor2: rgb(2, 0, 7)
+  --text-color: #fff
+
+body.dark-mode
+  --body-color: #121212
+  --headerFooter-color: #1D1D1D
+  --textTitle-color: #fff
+  --text-color: #fff
+  --hoverIcon: #fff
+  --card-color: #1b1b1b
+  --field__control-bg: rgb(34, 34, 34)
+  --field-icon-color: rgb(105, 105, 105)
+  --btn-solicitar-bg: #004bd6
+  --btn-solicitar-borde: rgb(13, 126, 255)
+  --btn-solicitar-color: #fff
+  --btn-solicitar-bg-hover: #1352c700
+  --btn-solicitar-borde-hover: #1352c7c7
+  --btn-solicitar-color-hover: #1e80ff
+  --field__label-color: rgb(255, 255, 255)
+  --field__native-color: rgb(255, 255, 255)
+  --field__native-bg: rgb(105, 105, 105)
+  --card-pedido-caption: rgb(128, 128, 128)
+  --card-pedido-color: #fff
+  --dialog-color: #292929
+
+body
+  color: var(--text-color)
+  background: var(--bgColor1)
+  background: linear-gradient(0deg, var(--bgColor1) 0%, var(--bgColor2) 100%)
+  height: 100vh
+  margin: 0
+  font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"
+
+body.light
+  background: rgb(2, 2, 91)
+  background: linear-gradient(0deg, rgba(2, 2, 91, 1) 0%, rgba(11, 0, 36, 1) 100%)
+
+//
+// Definir las variables de colores tanto para el tema claro como para el oscuro
+$bg-red: #ff0000
+$bg-blue: #0000ff
+$bg-green: #00ff00
+$bg-yellow: #ffff00
+$bg-orange: #ff8000
+$bg-purple: #ff00ff
+$bg-pink: #ff0080
+$bg-brown: #804000
+$bg-white: #ffffff
+$bg-black: #000000
+$color-test: #f0f0f0
+
+//crear una variable para almacenar todos los tamaños de pantalla para luego recorrerlos y crear las clases
+
+.d-block
+  display: block
+.d-flex
+  display: flex
+.d-none
+  display: none
+
+//recorrer el mapa de tamaños de pantalla y crear las clases
+@each $breakpoint, $value in $breakpoints
+  @media (min-width: $value)
+    .d-#{$breakpoint}-block
+      display: block
+    .d-#{$breakpoint}-flex
+      display: flex
+    .d-#{$breakpoint}-none
+      display: none
+
+@each $size in $sizes
+  .p-#{$size}
+    padding: #{$size}rem
+  .pt-#{$size}
+    padding-top: #{$size}rem
+  .pr-#{$size}
+    padding-right: #{$size}rem
+  .pb-#{$size}
+    padding-bottom: #{$size}rem
+  .pl-#{$size}
+    padding-left: #{$size}rem
+  .px-#{$size}
+    padding-left: #{$size}rem
+    padding-right: #{$size}rem
+  .py-#{$size}
+    padding-top: #{$size}rem
+    padding-bottom: #{$size}rem
+  .m-#{$size}
+    margin: #{$size}rem
+  .mt-#{$size}
+    margin-top: #{$size}rem
+  .mr-#{$size}
+    margin-right: #{$size}rem
+  .mb-#{$size}
+    margin-bottom: #{$size}rem
+  .ml-#{$size}
+    margin-left: #{$size}rem
+  .mx-#{$size}
+    margin-left: #{$size}rem
+    margin-right: #{$size}rem
+  .my-#{$size}
+    margin-top: #{$size}rem
+    margin-bottom: #{$size}rem
+
+.h-full
+  height: 100%
+
+.h-screen
+  height: 100vh
+
+.w-full
+  width: 100%
+
+.w-screen
+  width: 100vw
+
+.jus-center
+  justify-content: center
+
+.jus-between
+  justify-content: space-between
+
+.jus-around
+  justify-content: space-around
+
+.jus-evenly
+  justify-content: space-evenly
+
+.jus-start
+  justify-content: flex-start
+
+.jus-end
+  justify-content: flex-end
+
+.items-center
+  align-items: center
+
+.items-start
+  align-items: flex-start
+
+.items-end
+  align-items: flex-end
+
+.bg-red
+  background-color: $bg-red
+
+.bg-blue
+  background-color: $bg-blue
+
+.bg-green
+  background-color: $bg-green
+
+.bg-yellow
+  background-color: $bg-yellow
+
+.bg-orange
+  background-color: $bg-orange
+
+.bg-purple
+  background-color: $bg-purple
+
+.bg-white
+  background-color: $bg-white
+
+.text-white
+  color: $bg-white
+
+.text-black
+  color: $bg-black
+
+.text-center
+  text-align: center
+
+.divider
+  background-color: #969696
+
+.btn-large
+  height: 2.5rem
+  font-size: 1.2rem
+
+.header-sub
+  font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"
+  font-size: 1.9rem
+  font-weight: 600
+  color: #404040
+
+.card
+  padding: 1px
+  border-radius: 10px
+  background-color: #f13636
+
+.img-card
+  max-height: 15em
+  width: 100%
+  border-radius: 10px
+
+.badge
+  background-color: #737373
+  border-radius: 10px
+  padding: 0.1em .5em
+  font-size: .8rem
+  font-weight: 200
+  color: #fff
+  position: absolute
+  margin-top: .5em
+  margin-left: .5em
+
+
+
+
+//other classes
+.ant-upload
+  height: 40vh !important
+  width: 100% !important

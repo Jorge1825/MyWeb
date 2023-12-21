@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Login, NotFoundPage, Home } from "../views";
+import { Login, NotFoundPage, Home, Projects, MainPrivate,CreateProject } from "../views";
 import { PrivateRoutes, PublicRoutes } from "./";
 
 export const AppRouter = () => {
@@ -7,7 +7,7 @@ export const AppRouter = () => {
     <>
       <Routes>
         <Route
-          path="login"
+          path="/login"
           element={
             <PublicRoutes>
               <Login />
@@ -16,14 +16,23 @@ export const AppRouter = () => {
         />
 
         <Route
-          path="/*"
+          path="/dasboard/*"
           element={
             <PrivateRoutes>
-              <Home />
+              <MainPrivate>
+                <Routes>
+                  <Route path="/home" element={<Home />} />
+                  <Route path="/profile" element={<Home />} />
+                  <Route path="/settings" element={<Home />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/projects/new" element={<CreateProject />} />
+                  <Route path="/*" element={<NotFoundPage />} />
+                </Routes>
+              </MainPrivate>
             </PrivateRoutes>
           }
         />
-        {/* Cuando  no se encuentra la ruta renderiza el componente NotFoundPage */}
+
 
         <Route
           path="*"

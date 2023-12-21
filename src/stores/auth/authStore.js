@@ -1,10 +1,18 @@
-import { configureStore } from '@reduxjs/toolkit'
-import counterReducer  from '../../features/authSlice'
+import { create } from "zustand";
+import { persist, createJSONStorage, devtools } from "zustand/middleware";
 
-
-export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
-  devTools: import.meta.env.VITE_MODE !== 'production',
-})
+//craer una tienda para setear y obtener el usuario mnteniendo la persistencia de datos
+export const useAuthStore = create(
+  devtools(
+    persist(
+      (set) => ({
+        user: null,
+        setUser: (user) => set({ user }),
+      }),
+      {
+        name: "auth-storage",
+        getStorage: () => createJSONStorage(),
+      }
+    )
+  )
+);

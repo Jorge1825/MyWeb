@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+.header {
+    max-height: 30%;
+    height: 30%;
+}
+
+.body {
+    max-height: 50%;
+    height: 50%;
+}
+
+
+
+.footer {
+    max-height: 10%;
+    height: 10%;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    justify-content: center;
+    align-items: end;
+    display: flex;
+
+}
+
+
+.card-user {
+    background-color: rgb(47, 48, 74);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.nameuser {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.rol {
+    color: #a2a2a2;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 5px 0 .5rem 0;
+}
+
+
+.icon-card {
+    color: #b6b6b6;
+    font-size: 1.2rem;
+    margin: 0 10px 0 0;
+}
+
+.text-card {
+    color: #b6b6b6;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+
+
+.menu-item {
+    color: #b6b6b6;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+
+}
+
+.menu-item li {
+    padding: 20px 0px 20px 20px !important;
+    cursor: pointer;
+    height: 50px !important;
+}
+
+.menu-item li:hover {
+    background-color: #2f304ac2 !important;
+    color: rgb(255, 255, 255) !important;
+    transform: translateX(5px) ;
+    -webkit-transform: translateX(5px) ;
+    -moz-transform: translateX(5px) ;
+    -ms-transform: translateX(5px) ;
+    -o-transform: translateX(5px) ;
+}
+
+.menu-item svg {
+    margin-right: 8px;
+    font-size: 1.3rem !important;
+}
+
+.menu-item .ant-menu-item-selected{
+    transform: translateX(15px);
+    -webkit-transform: translateX(15px);
+    -moz-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    -o-transform: translateX(15px);
+}
+
+.menu-item.collapse .ant-menu-item-selected{
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+.menu-item.collapse li {
+   align-items: center;
+    display: flex;
+}

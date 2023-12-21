@@ -1,10 +1,12 @@
-import React from 'react'
+
+import CardLogin from "../components/Login/Card";
+
 
 export const Login = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
 
+  return (
+    <div className="cred full">
+      <CardLogin />
+    </div>
+  );
+};

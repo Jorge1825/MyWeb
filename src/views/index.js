@@ -1,4 +1,6 @@
 export * from './Login'
-export * from './Register'
+export * from './MainPrivate'
 export * from './Home'
 export * from './NotFoundPage'
+export * from './Projects'
+export * from './CreateProject'
