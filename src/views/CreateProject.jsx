@@ -6,11 +6,11 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
-import EditIcon from "@mui/icons-material/Edit";
 
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { Row, Col } from "antd";
 import { Modal, Upload } from "antd";
+import { FormRegisterProject } from "../components/Forms/FormRegisterProject";
 
 const getBase64 = (file) =>
   new Promise((resolve, reject) => {
@@ -118,8 +118,18 @@ export const CreateProject = () => {
               >
                 Datos Básicos
               </span>
+              <br />
+
+              <Typography
+                sx={{ fontSize: 16 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                Información del proyecto
+              </Typography>
+              <FormRegisterProject />
             </CardContent>
-            <CardActions>fgdfdf</CardActions>
+            <CardActions>Botones</CardActions>
           </Card>
         </Col>
       </Row>

@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useEffect} from "react";
 import AddIcon from "@mui/icons-material/Add";
 
 import { Row, Col, Button } from "antd";
@@ -7,8 +7,21 @@ import CardProject from "../components/Proyects/CardProyect";
 
 import { useNavigate } from "react-router-dom";
 
+//api 
+import ApiGithub from "../api/github";
+
 export const Projects = () => {
   const navigate = useNavigate();
+
+  //hacer la peticion a la api de github una vez que se monte el componente
+ useEffect(() => {
+    ApiGithub.getRepos().then((res) => {
+      console.log(res);
+    });
+  }, []);
+
+
+
   return (
     <>
       <HeaderSubPage title="Proyectos" />

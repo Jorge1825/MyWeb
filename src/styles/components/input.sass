@@ -1,0 +1,120 @@
+
+/* 
+ <>
+ <div
+ className="container-input"
+ >
+ <label>{label}</label>
+ <input
+ type={type}
+ placeholder={placeholder}
+ {...register(name, rules)}
+ />
+
+ {errors && <span>{errors.message}</span>}
+ </div>
+ </>
+ */
+
+.container-input
+    display: flex
+    flex-direction: column
+    margin-bottom: 1rem
+    width: 100%
+
+    & label
+        font-size: 1.2rem
+        margin-bottom: 0.5rem
+
+    & input
+        border: 1px solid #ccc
+        border-radius: 0.5rem
+        font-size: 1.2rem
+        padding: 0.5rem
+
+    & input:focus
+        outline: none
+        border-color: #f13636
+
+    & input::placeholder
+        color: #ccc
+
+    & span
+        color: #f13636
+        font-size: 1.2rem
+        margin-top: 0.5rem
+
+    & input[type="checkbox"]
+        width: 1.2rem
+        height: 1.2rem
+        margin-right: 0.5rem
+
+    & input[type="checkbox"]:checked
+        background-color: #f13636
+
+    & input[type="checkbox"]:checked:after
+        content: ""
+        position: absolute
+        width: 0.5rem
+        height: 0.5rem
+        background-color: #fff
+        border-radius: 0.2rem
+        top: 0.2rem
+        left: 0.2rem
+
+    & input[type="radio"]
+        width: 1.2rem
+        height: 1.2rem
+        margin-right: 0.5rem
+
+    & input[type="radio"]:checked
+        background-color: #f13636
+
+    & input[type="radio"]:checked:after
+        content: ""
+        position: absolute
+        width: 0.5rem
+        height: 0.5rem
+        background-color: #fff
+        border-radius: 0.2rem
+        top: 0.2rem
+        left: 0.2rem
+
+    & select
+        border: 1px solid #ccc
+        border-radius: 0.5rem
+        font-size: 1.2rem
+        padding: 0.5rem
+
+    & select:focus
+        outline: none
+        border-color: #f13636
+
+    & select::placeholder
+        color: #ccc
+
+    & textarea
+        border: 1px solid #ccc
+        border-radius: 0.5rem
+        font-size: 1.2rem
+        padding: 0.5rem
+
+    & textarea:focus
+        outline: none
+        border-color: #f13636
+
+    & textarea::placeholder
+        color: #ccc
+
+    & &
+        margin-bottom: 0
+
+    & & label
+        font-size: 1rem
+        margin-bottom: 0.2rem
+
+    & & input
+        font-size: 1rem
+        padding: 0.2rem
+
+// Path: src/styles/components/button.sass
