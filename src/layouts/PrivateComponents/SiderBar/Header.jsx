@@ -1,29 +1,29 @@
-import { Avatar, Row, Col } from "antd";
-
 import "./SiderBar.css";
-
+import Avatar from "@mui/material/Avatar";
 import PropTypes from "prop-types";
 
 export function Header({ show }) {
   return (
     <>
-      <Row className=" jus-center header items-center">
-        <Col className="jus-center d-flex" span={20}>
+      <div className="header items-center py-2 bg-primary">
+        <div className="justify-center flex py-3">
           <Avatar
-            className="mt-1 m-0 p-0"
+            alt="Logo"
             src="/assets/images/logo.png"
-            size={80}
+            sx={
+              show
+                ? { width: 40, height: 40,}
+                : { width: 70, height: 70}
+            }
           />
-        </Col>
-        <Col 
-        className={`jus-center d-flex ${show ? "d-none" : ""}`}
-        span={20}>
+        </div>
+        <div className={`flex px-6 ${show ? "hidden" : ""}`}>
           <div className="card-user w-full">
             <p className=" nameuser">Jorge</p>
             <p className=" rol">Administrador</p>
           </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </>
   );
 }

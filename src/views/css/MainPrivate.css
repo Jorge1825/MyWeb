@@ -53,6 +53,8 @@
     -ms-transform: translateX(-15px);
     -o-transform: translateX(-15px);
     border: 1px solid rgba(255, 255, 255, 0.237);
+    z-index: 9999; 
+    position: relative; 
 }
 
 .btn-close-open:hover {

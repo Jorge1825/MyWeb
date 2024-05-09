@@ -46,7 +46,7 @@ export function Body({show}) {
 
   return (
     <>
-      <Row className="jus-center flex body items-center">
+      <div className="jus-center flex body items-center bg-primary">
         <Col span={20}>
           <Menu
             className={`menu-item ${show ? "collapse" : ""}`}
@@ -67,7 +67,7 @@ export function Body({show}) {
             onClick={(route) => navigate(optionsSidebar[route.key].route)}
           />
         </Col>
-      </Row>
+      </div>
     </>
   );
 }

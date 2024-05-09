@@ -31,19 +31,21 @@ export function HeaderPrivate({ collapsed, setCollapsed }) {
     <>
       <Header className="header-page">
         <Row className="w-full ju">
-          <Col span={1} className="items-center d-flex ">
-            <Button
-              className="d-none d-lg-block btn-close-open"
-              type="text"
-              icon={
-                collapsed ? (
-                  <KeyboardArrowRightIcon />
-                ) : (
-                  <KeyboardArrowLeftIcon />
-                )
-              }
+          <Col span={1} className="items-center flex">
+            <button
+              type="button"
+              className="
+              btn-close-open
+               font-medium rounded-full text-sm p-1.5 text-center inline-flex items-center me-2 "
               onClick={() => setCollapsed(!collapsed)}
-            />
+            >
+              {collapsed ? (
+                <KeyboardArrowRightIcon />
+              ) : (
+                <KeyboardArrowLeftIcon />
+              )}
+              <span className="sr-only">Icon description</span>
+            </button>
           </Col>
           <Col span={1} className="">
             <Switch
@@ -57,13 +59,13 @@ export function HeaderPrivate({ collapsed, setCollapsed }) {
             />
           </Col>
           <Col span={20} className=" jus-end d-flex items-center">
-            <Tooltip title="Usuarios Activos">
+            {/* <Tooltip title="Usuarios Activos">
               <IconButton aria-label="cart">
                 <StyledBadge badgeContent={4}>
                   <PeopleAltIcon style={{ fontSize: 26, color: "#808080" }} />
                 </StyledBadge>
               </IconButton>
-            </Tooltip>
+            </Tooltip> */}
           </Col>
           <Col span={1} className=" jus-end d-flex items-center">
             <Tooltip title="Notificaciones">

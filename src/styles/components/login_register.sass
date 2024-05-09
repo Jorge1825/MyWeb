@@ -1,0 +1,294 @@
+
+.img-background
+    background-image: url('../../assets/images/background-login.png')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    height: 100vh
+    width: 100vw
+    position: fixed
+    z-index: -1
+    filter: blur(5px)
+
+.img-left
+    position: absolute,
+    top: 0,
+    left: 0,
+    width: 100%,
+    height: 100%,
+    object-fit: cover,
+    border-radius: 10px 0px 0px 10px,
+    opacity: 0.8,
+    z-index: -1
+    box-shadow: 0px 0px 10px 0px #000
+
+.img-right
+    position: absolute,
+    top: 0,
+    left: -10%,
+    height: 100%,
+    object-fit: contain,
+
+    z-index: -1
+
+.title
+    font-size: 2.5rem
+    font-weight: 600
+
+.subtitle
+    font-size: 1.5rem
+    font-weight: 600
+
+.text-body1
+    font-size: 1rem
+    font-weight: 400
+    text-align: justify
+
+.text-body2
+    font-size: 1rem
+    font-weight: 600
+    text-align: justify
+
+.btn-login
+    position: relative
+    margin: 0
+    padding: 10px 20px
+    outline: none
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    text-transform: uppercase
+    background-color: #0f5bf2
+    border: 1px solid rgba(22, 76, 167, 0.6)
+    border-radius: 10px
+    color: #ffffff
+    font-weight: 400
+    font-family: inherit
+    z-index: 0
+    overflow: hidden
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1)
+
+.btn-login span
+    color: #ffffff
+    font-size: 14px
+    font-weight: 500
+    letter-spacing: 0.7px
+
+.btn-login:hover
+    animation: rotate624 0.7s ease-in-out both
+
+.btn-login:hover span
+    animation: storm1261 0.7s ease-in-out both
+    animation-delay: 0.06s
+
+@keyframes rotate624
+    0%
+        transform: rotate(0deg) translate3d(0, 0, 0)
+
+    25%
+        transform: rotate(3deg) translate3d(0, 0, 0)
+
+    50%
+        transform: rotate(-3deg) translate3d(0, 0, 0)
+
+    75%
+        transform: rotate(1deg) translate3d(0, 0, 0)
+
+    100%
+        transform: rotate(0deg) translate3d(0, 0, 0)
+
+@keyframes storm1261
+    0%
+        transform: translate3d(0, 0, 0) translateZ(0)
+
+    25%
+        transform: translate3d(4px, 0, 0) translateZ(0)
+
+    50%
+        transform: translate3d(-3px, 0, 0) translateZ(0)
+
+    75%
+        transform: translate3d(2px, 0, 0) translateZ(0)
+
+    100%
+        transform: translate3d(0, 0, 0) translateZ(0)
+
+.btn-login.btn-shine
+    border: 1px solid
+    overflow: hidden
+    position: relative
+
+    & span
+        z-index: 20
+
+    &:after
+        background: #ffffff
+        content: ""
+        height: 155px
+        left: -75px
+        opacity: 0.4
+        position: absolute
+        top: -50px
+        transform: rotate(35deg)
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)
+        width: 50px
+        z-index: -10
+
+    &:hover:after
+        left: 120%
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)
+
+.btn-register
+    position: relative
+    margin: 0
+    padding: 10px 20px
+    outline: none
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    text-transform: uppercase
+    background-color: #fefefe
+    border: 1px solid rgba(22, 76, 167, 0.6)
+    border-radius: 10px
+    color: #174dff
+    font-weight: 400
+    font-family: inherit
+    z-index: 0
+    overflow: hidden
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1)
+
+.btn-register span
+    color: #0b3cff
+    font-size: 14px
+    font-weight: 500
+    letter-spacing: 0.7px
+
+.btn-register:hover
+    animation: rotate624register 0.7s ease-in-out both
+
+.btn-register:hover span
+    animation: storm1261register 0.7s ease-in-out both
+    animation-delay: 0.06s
+
+@keyframes rotate624register
+    0%
+        transform: rotate(0deg) translate3d(0, 0, 0)
+
+    25%
+        transform: rotate(-3deg) translate3d(0, 0, 0)
+
+    50%
+        transform: rotate(3deg) translate3d(0, 0, 0)
+
+    75%
+        transform: rotate(-1deg) translate3d(0, 0, 0)
+
+    100%
+        transform: rotate(0deg) translate3d(0, 0, 0)
+
+@keyframes storm1261register
+    0%
+        transform: translate3d(0, 0, 0) translateZ(0)
+
+    25%
+        transform: translate3d(-4px, 0, 0) translateZ(0)
+
+    50%
+        transform: translate3d(3px, 0, 0) translateZ(0)
+
+    75%
+        transform: translate3d(-2px, 0, 0) translateZ(0)
+
+    100%
+        transform: translate3d(0, 0, 0) translateZ(0)
+
+.btn-register.btn-shine-register
+    border: 1px solid
+    overflow: hidden
+    position: relative
+
+    & span
+        z-index: 20
+
+    &:after
+        background: #0f5bf2
+        content: ""
+        height: 155px
+        left: -75px
+        opacity: 0.4
+        position: absolute
+        top: -50px
+        transform: rotate(35deg)
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)
+        width: 50px
+        z-index: -10
+
+    &:hover:after
+        left: 120%
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)
+
+.btn-back
+    position: absolute
+    top: 20px
+    right: 20px
+    padding: 3px
+    outline: none
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    text-transform: uppercase
+    background-color: #ffffff
+    border: 1px solid rgba(22, 76, 167, 0.6)
+    border-radius: 50%
+
+    .icon-btn
+        font-size: 1.5rem
+        color: #0f5bf2
+
+    &:hover
+        color: #ffffff
+        background-color: #0f5bf2
+        border: 1px solid rgba(22, 76, 167, 0.6)
+        animation: rotate624back .3s ease-in-out both
+
+    &:hover .icon-btn
+        color: #ffffff
+
+@keyframes rotate624back
+    0%
+        transform: rotate(0deg) translate3d(0, 0, 0)
+
+    100%
+        transform: rotate(360deg) translate3d(0, 0, 0)
+
+.icon
+    color: rgb(62, 126, 255)
+
+.input:focus-within .icon
+    color: #0091ff !important
+
+.MuiInputBase-input
+    color: rgb(125, 125, 125) !important
+
+.MuiInputBase-input:focus
+    color: #004dc9 !important
+
+.input-error .MuiInputBase-input
+    color: #ffa4a4 !important
+
+.input-error .icon
+    color: #fe8383 !important
+
+.text-error
+    color: #fe8383 !important
+    font-size: 0.8rem
+    font-weight: 600
+    text-align: left
+    margin-top: 5px
+    

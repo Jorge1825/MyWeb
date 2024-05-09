@@ -18,7 +18,7 @@ export function Footer({show}) {
 
   return (
     <>
-      <Row className="jus-center flex footer pb-1">
+      <div className="jus-center flex footer pb-1 bg-primary">
         <Col span={20}>
           <Menu
            className={`menu-item jus-center d-flex ${show ? "collapse" : ""}`}
@@ -32,7 +32,7 @@ export function Footer({show}) {
             onClick={(route) => navigate(optionsSidebar[route.key].route)}
           />
         </Col>
-      </Row>
+      </div>
     </>
   );
 }

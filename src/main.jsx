@@ -1,19 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { HashRouter } from "react-router-dom";
-import { AppRouter } from "./router/AppRouter";
 
 import App from "./App";
 
 import "./styles/styles.sass";
-
+import "./index.css";
+import 'animate.css';
+import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HashRouter>
-      <App>
-        <AppRouter />
-      </App>
-    </HashRouter>
+    <App />
   </React.StrictMode>
 );

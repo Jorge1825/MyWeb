@@ -1,11 +1,11 @@
-import React from "react";
+import PropTypes from "prop-types";
 
-export const Chip = ({ text = "", color = "green" }) => {
+export const Chip = ({ text, color }) => {
   return (
     <div
       style={{
         backgroundColor: "#001529",
-        color: 'white',
+        color: "white",
         padding: "5px",
         borderRadius: "15px",
         display: "flex",
@@ -39,4 +39,13 @@ export const Chip = ({ text = "", color = "green" }) => {
       <span>{text}</span>
     </div>
   );
+};
+
+Chip.propTypes = {
+  text: PropTypes.string.isRequired,
+  color: PropTypes.string,
+};
+
+Chip.defaultProps = {
+  color: "green",
 };

@@ -287,8 +287,8 @@ export const NotFoundPage = () => {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <Row className=" w-screen jus-center d-flex">
-            <Col className=" jus-end d-flex items-center" span={6}>
+          <div className="w-screen justify-center flex">
+            <div className="justify-end flex items-center">
               <img
                 src="/src/assets/images/Logo.png"
                 alt="404"
@@ -298,8 +298,8 @@ export const NotFoundPage = () => {
                   height: "200px",
                 }}
               />
-            </Col>
-            <Col className="text-center jus-center " span={12}>
+            </div>
+            <div className="text-center justify-cente ml-8" >
               <span className="title404">404</span>
               <br></br>
               <span className="body404">Page Not Found</span>
@@ -318,17 +318,16 @@ export const NotFoundPage = () => {
                         marginRight: 6,
                       }}
                     />
-                    Volver Al Inicio
+                    Volver
                   </Link>
                 </Button>
               </div>
-            </Col>
-          </Row>
+            </div>
+          </div>
         </div>
 
         <Particles
           id="tsparticles"
-          particlesLoaded={particlesLoaded}
           options={options}
         ></Particles>
       </div>

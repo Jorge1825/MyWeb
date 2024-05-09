@@ -1,24 +1,28 @@
-import { Routes, Route } from "react-router-dom";
-import { Login, NotFoundPage, Home, Projects, MainPrivate,CreateProject } from "../views";
-import { PrivateRoutes, PublicRoutes } from "./";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  Login_Register,
+  NotFoundPage,
+  Home,
+  Projects,
+  MainPrivate,
+  CreateProject,
+} from "../views";
+import { PrivateRoutes } from ".";
+import { useAuthStore } from "../store/auth/auth";
 
 export const AppRouter = () => {
+  const isAuth = useAuthStore((state) => state.isAuth);
   return (
-    <>
+    <BrowserRouter>
       <Routes>
-        <Route
-          path="/login"
-          element={
-            <PublicRoutes>
-              <Login />
-            </PublicRoutes>
-          }
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login_Register />} />
 
+        {/* Rutas privadas */}
         <Route
           path="/dasboard/*"
           element={
-            <PrivateRoutes>
+            <PrivateRoutes isAuthenticated={true}>
               <MainPrivate>
                 <Routes>
                   <Route path="/home" element={<Home />} />
@@ -33,16 +37,8 @@ export const AppRouter = () => {
           }
         />
 
-
-        <Route
-          path="*"
-          element={
-            <PublicRoutes>
-              <NotFoundPage />
-            </PublicRoutes>
-          }
-        />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </>
+    </BrowserRouter>
   );
 };

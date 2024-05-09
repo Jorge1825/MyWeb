@@ -1,11 +1,22 @@
-
 import { ToastContainer } from "react-toastify";
+import { AppRouter } from "./router/AppRouter";
 
-function App({ children }) {
+function App() {
   return (
     <>
-      <ToastContainer />
-      <div className="h-screen">{children}</div>
+      <ToastContainer limit={4} />
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <AppRouter />
+      </div>
     </>
   );
 }

@@ -1,9 +1,12 @@
+
+  
 /* importar letra */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400500600700&display=swap')
 
 // Ui styles
 @import './base/_settings.sass'
 @import './components/input.sass'
+
 
 :root
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif
@@ -40,6 +43,7 @@ body
   background: linear-gradient(0deg, var(--bgColor1) 0%, var(--bgColor2) 100%)
   height: 100vh
   margin: 0
+  padding: 0
   font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"
 
 body.light
@@ -60,136 +64,10 @@ $bg-white: #ffffff
 $bg-black: #000000
 $color-test: #f0f0f0
 
-//crear una variable para almacenar todos los tamaños de pantalla para luego recorrerlos y crear las clases
+.bg-primary
+  background-color: #001529
 
-.d-block
-  display: block
-.d-flex
-  display: flex
-.d-flex-column
-  display: flex
-  flex-direction: column
-.d-flex-row
-  display: flex
-  flex-direction: row
-.d-none
-  display: none
 
-//recorrer el mapa de tamaños de pantalla y crear las clases
-@each $breakpoint, $value in $breakpoints
-  @media (min-width: $value)
-    .d-#{$breakpoint}-block
-      display: block
-    .d-#{$breakpoint}-flex
-      display: flex
-    .d-#{$breakpoint}-none
-      display: none
-
-@each $size in $sizes
-  .p-#{$size}
-    padding: #{$size}rem
-  .pt-#{$size}
-    padding-top: #{$size}rem
-  .pr-#{$size}
-    padding-right: #{$size}rem
-  .pb-#{$size}
-    padding-bottom: #{$size}rem
-  .pl-#{$size}
-    padding-left: #{$size}rem
-  .px-#{$size}
-    padding-left: #{$size}rem
-    padding-right: #{$size}rem
-  .py-#{$size}
-    padding-top: #{$size}rem
-    padding-bottom: #{$size}rem
-  .m-#{$size}
-    margin: #{$size}rem
-  .mt-#{$size}
-    margin-top: #{$size}rem
-  .mr-#{$size}
-    margin-right: #{$size}rem
-  .mb-#{$size}
-    margin-bottom: #{$size}rem
-  .ml-#{$size}
-    margin-left: #{$size}rem
-  .mx-#{$size}
-    margin-left: #{$size}rem
-    margin-right: #{$size}rem
-  .my-#{$size}
-    margin-top: #{$size}rem
-    margin-bottom: #{$size}rem
-
-.h-full
-  height: 100%
-
-.h-screen
-  height: 100vh
-
-.w-full
-  width: 100%
-
-.w-screen
-  width: 100vw
-
-.jus-center
-  justify-content: center
-
-.jus-between
-  justify-content: space-between
-
-.jus-around
-  justify-content: space-around
-
-.jus-evenly
-  justify-content: space-evenly
-
-.jus-start
-  justify-content: flex-start
-
-.jus-end
-  justify-content: flex-end
-
-.items-center
-  align-items: center
-
-.items-start
-  align-items: flex-start
-
-.items-end
-  align-items: flex-end
-
-.bg-red
-  background-color: $bg-red
-
-.bg-blue
-  background-color: $bg-blue
-
-.bg-green
-  background-color: $bg-green
-
-.bg-yellow
-  background-color: $bg-yellow
-
-.bg-orange
-  background-color: $bg-orange
-
-.bg-purple
-  background-color: $bg-purple
-
-.bg-white
-  background-color: $bg-white
-
-.text-white
-  color: $bg-white
-
-.text-black
-  color: $bg-black
-
-.text-center
-  text-align: center
-
-.divider
-  background-color: #969696
 
 .btn-large
   height: 2.5rem
@@ -239,8 +117,3 @@ $color-test: #f0f0f0
   font-size: 1.5rem
   font-weight: 400
   color: #fff
-
-
-.inputForm
-  width: 100%
-  margin-bottom: 1em

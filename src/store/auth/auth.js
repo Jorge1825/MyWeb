@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { persist, createJSONStorage, devtools } from "zustand/middleware";
+import { persist, devtools } from "zustand/middleware";
 
 //craer una tienda para setear y obtener el usuario mnteniendo la persistencia de datos
 export const useAuthStore = create(
@@ -7,11 +7,14 @@ export const useAuthStore = create(
     persist(
       (set) => ({
         user: null,
+        token: null,
+        isAuth: false,
         setUser: (user) => set({ user }),
+        setToken: (token) => set({ token, isAuth: true }),
+        logout: () => set({ user: null, token: null, isAuth: false }),
       }),
       {
-        name: "auth-storage",
-        getStorage: () => createJSONStorage(),
+        name: "auth",
       }
     )
   )
